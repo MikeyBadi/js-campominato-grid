@@ -14,7 +14,6 @@ const btn = document.querySelector("button").addEventListener("click", function(
 
 })
 
-// faccio la funzione che prenda intanto il livello facile, aggiungerò dopo la funzione che prende il livello
 function sqrStart(){
   const level = document.querySelector("#lvlChange").value;
   
