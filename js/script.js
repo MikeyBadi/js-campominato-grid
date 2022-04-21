@@ -7,11 +7,50 @@
 
 const container = document.querySelector(".mb_container")
 
+const btn = document.querySelector("button").addEventListener("click", function(){
+
+  container.innerHTML = ""
+  sqrStart()
+
+})
 
 // faccio la funzione che prenda intanto il livello facile, aggiungerò dopo la funzione che prende il livello
 function sqrStart(){
-  for(let i= 0; i<100; i++){
+  const level = document.querySelector("#lvlChange").value;
+  
+  for(let i= 1; i<=level; i++){
+    const sqr = sqrGen(container, parseInt(level))
     // devo creare una funzione che mi crei gli square
 
-  }
+    sqr.innerHTML = `<span>${i}</span>`
+    sqr.classList.add("mb_selected")
+    sqr.addEventListener('click', function(){
+      // this è una parola chiave che mi "dice" quale è l'elemento cickato
+      this.classList.add('mb_clicked');
+  })
+  };
+
 };
+
+/**
+ * creazione dello square
+ * @param {divOfContainer} target 
+ */
+function sqrGen(target, lvl){
+  const sqr = document.createElement("div");
+
+  const level = document.querySelector("#lvlChange").value;
+  
+  if(lvl === 100){
+    sqr.className += "mb_square_100";
+  } else if (lvl === 81){
+    sqr.className += "mb_square_81";
+  } else if (lvl === 49){
+    sqr.className += "mb_square_49";
+  }
+
+sqr.classList.add("square");
+target.append(sqr);
+return sqr;
+}
+

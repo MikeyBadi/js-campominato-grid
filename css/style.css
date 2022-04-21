@@ -64,3 +64,6 @@ header, footer{
 .square.mb_selected.mb_even{
   background-color: rgb(131, 21, 21);
 }
+.square.mb_selected.mb_clicked{
+  background-color: rgb(72, 92, 240);
+}
