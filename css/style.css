@@ -1,0 +1,66 @@
+body{
+  background-color: slategray;
+}
+
+header, footer{
+  background-color: white;
+  padding: 20px 100px;
+}
+
+.start{
+  margin-left: 10px;
+  border-radius: 10px;
+  border: 2px solid slategray;
+}
+
+.mb_wrap-container{
+  height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mb_container{
+  display: flex;
+  /* justify-content: center; */
+  align-content: flex-start;
+  flex-wrap: wrap;
+  height: 545px;
+  width: 545px;
+}
+
+.square{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 2px solid white;
+}
+
+.mb_square_100{
+  height: calc(545px / 10);
+  width: calc(545px / 10);
+}
+.mb_square_81{
+  height: calc(545px / 9);
+  width: calc(545px / 9);
+}
+.mb_square_49{
+  height: calc(545px / 7);
+  width: calc(545px / 7);
+}
+
+.square span{
+  display: none;
+}
+
+.square.mb_selected span{
+  display: block;
+}
+
+.square.mb_selected.mb_odd{
+  background-color: rgb(79, 175, 143);
+}
+.square.mb_selected.mb_even{
+  background-color: rgb(131, 21, 21);
+}
